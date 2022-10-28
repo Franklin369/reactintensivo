@@ -1,0 +1,38 @@
+.memo-block {
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+}
+.memo-block-front, .memo-block-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 4px;
+}
+.memo-block-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.memo-block-flipped {
+    transform: rotateY(180deg);
+  
+}
+.memo-block-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    box-shadow: 5px 5px 10px 0px rgb(0 0 0 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.memo-block-front {
+    background-color: #7250FF;
+}
+

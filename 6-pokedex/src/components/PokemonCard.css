@@ -1,0 +1,110 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+    background-color: #910305 !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #fb7248 !important;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    width: 38%;
+    height: 55px;
+    margin: 10px 0;
+    padding: 5px 20px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .right:hover {
+    background: linear-gradient(135deg, #f0501d 40%, black 40%);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .right:hover > :nth-child(3) {
+    color: white;
+  }
+  .right:hover > :nth-child(4) {
+    filter: invert(1);
+  }
+  .show {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 450px;
+    height: 75vh;
+    left: 10%;
+    bottom: 10%;
+    z-index: 2;
+  }
+  .show > img {
+    filter: drop-shadow(2px 4px 12px black);
+    max-width: 300px;
+  }
+  .stat-container-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-left: -5%;
+    padding: 0 10px;
+    width: 110%;
+    height: 65px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #f0501d 40%, black 40%);
+  }
+  .img-title {
+    width: 45px;
+    max-height: 60px;
+    margin-right: 10px;
+  }
+  .pokeball-title {
+    width: 40px;
+    margin-left: auto;
+    filter: invert(1);
+  }
+  .stats-left,
+  .stats-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 20px;
+  }
+  .stats-left > p,
+  .stats-right > p {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px;
+    border-bottom: 1px solid #90979f38;
+  }
+  .base-stats {
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+  }
+  .base-stats > div {
+    text-align: center;
+    width: 100%;
+  }
+  .stats {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 45px;
+    background: #5a5a58;
+    color: white;
+  }
+  .stats:nth-child(1),
+  .stats:nth-child(2) {
+    border-bottom: 1px solid white;
+  }
+  

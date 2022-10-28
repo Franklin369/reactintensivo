@@ -1,0 +1,43 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0 350px 0 30px;
+    top: 30px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(115deg, #ddd3d8 57.7%, black 57.7%);
+   
+}
+
+.title__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+   
+}
+
+.title__left>p {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.caught-seen {
+    display: flex;
+    align-items: center;
+    
+}
+
+.caught,
+.seen {
+    display: flex;
+    align-items: center;
+    background: #5a5a58;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 5px 20px;
+    color: white;
+    
+}
