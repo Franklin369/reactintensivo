@@ -1,13 +1,17 @@
 import styled, { ThemeProvider } from "styled-components";
-import { Carousel } from "../Carousel";
 import { Button } from "../Button";
 import { Dark } from "../../styles/Themes";
+import { lazy, Suspense } from "react";
+import { Loading } from "../Loading";
+const  Carousel  = lazy(() => import("../Carousel"));
 export function About() {
   return (
     <Section id="about">
       <Container>
         <Box>
-          <Carousel />
+          <Suspense fallback={<Loading/>}>
+            <Carousel />
+          </Suspense>
         </Box>
         <Box>
           <Title>
@@ -26,7 +30,7 @@ export function About() {
           </SubTextLight>
           <ButtonContainer>
             <ThemeProvider theme={Dark}>
-              <Button text="UNIRSE A DISCORD" link="#"/>
+              <Button text="UNIRSE A DISCORD" link="#" />
             </ThemeProvider>
           </ButtonContainer>
         </Box>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Typewriter from "typewriter-effect";
 import { Button } from "./Button";
-export function TypeWriterText() {
+export default function TypeWriterText() {
   return (
     <>
       <Title>

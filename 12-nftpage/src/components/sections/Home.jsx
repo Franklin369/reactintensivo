@@ -1,19 +1,28 @@
 import styled, { keyframes } from "styled-components";
-import { CoverVideo } from "../CoverVideo";
-import { TypeWriterText } from "../TypeWriterText";
+
 import imgreact from "../../assets/react.png";
+import { lazy, Suspense } from "react";
+import { Loading } from "../../components/Loading";
+const TypeWriterText = lazy(() => import("../TypeWriterText"));
+const CoverVideo= lazy(()=>import("../CoverVideo"))
+
 export function Home() {
   return (
     <Section id="home">
       <Container>
         <Box>
-          <TypeWriterText />
+          <Suspense fallback={<Loading />}>
+            <TypeWriterText />
+          </Suspense>
         </Box>
         <Box>
-          <CoverVideo />
+        <Suspense fallback={<Loading />}>
+        <CoverVideo />
+          </Suspense>
+        
         </Box>
         <Round>
-          <img src={imgreact} width={500} height={400} alt="React"/>
+          <img src={imgreact} width={500} height={400} alt="React" />
         </Round>
       </Container>
     </Section>
@@ -78,5 +87,4 @@ const Round = styled.div`
   @media (max-width: 48em) {
     right: 1.5rem;
   }
-
 `;
